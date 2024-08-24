@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { ReactNode } from "react";
 import { ClerkProvider } from "@clerk/nextjs";
-// import { ThemeProvider } from "@/context/ThemeProvider";
+import { ThemeProvider } from "@/context/ThemeProvider";
 
 import "./globals.css";
-// import "../styles/prism.css";
+import "../styles/prism.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             },
           }}
         >
-          {/* <ThemeProvider>{children}</ThemeProvider> */}
+          <ThemeProvider>{children}</ThemeProvider>
           {children}
         </ClerkProvider>
       </body>
